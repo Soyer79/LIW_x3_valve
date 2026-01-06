@@ -1,34 +1,12 @@
-#include <SuplaDevice.h>//////https://github.com/SUPLA
-#include <WiFiClientSecure.h>
-#include <supla/network/esp_wifi.h>
-#include <supla/storage/littlefs_config.h>
-#include <supla/network/esp_web_server.h>
-#include <supla/network/html/device_info.h>
-#include <supla/network/html/protocol_parameters.h>
-#include <supla/network/html/wifi_parameters.h>
-#include <supla/network/html/custom_parameter.h>
-#include <supla/network/html/custom_text_parameter.h>
-#include <supla/device/supla_ca_cert.h>
-#include <supla/device/notifications.h>
-#include <supla/control/relay.h>
-#include <supla/clock/clock.h> //int clock1.getYear(); getMonth(); getDay(); getDayOfWeek();1 - Sunday, 2 - Monday getHour(); getMin(); getSec();
-#include "HWCDC.h"
-#include <supla/device/enter_cfg_mode_after_power_cycle.h>
-#include <supla/sensor/impulse_counter.h>
-#include <supla/storage/eeprom.h>
-
-Supla::Eeprom eeprom;
-
-Supla::Sensor::ImpulseCounter *counter1 = nullptr;
 Supla::Sensor::ImpulseCounter *counter2 = nullptr;
 Supla::Sensor::ImpulseCounter *counter3 = nullptr;
 Supla::ESPWifi wifi;
 Supla::Clock clock1;
 Supla::LittleFsConfig configSupla(4000);// powiększony rozmiar pamieci z powodu dodatkowych INPUTów
 Supla::EspWebServer suplaServer;
-Supla::Html::DeviceInfo htmlDeviceInfo(&SuplaDevice);
-Supla::Html::WifiParameters htmlWifi;
-Supla::Html::ProtocolParameters htmlProto;
+//Supla::Html::DeviceInfo htmlDeviceInfo(&SuplaDevice);
+//Supla::Html::WifiParameters htmlWifi;
+//Supla::Html::ProtocolParameters htmlProto;
 
 HWCDC USBSerial;
 
